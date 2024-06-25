@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Command Repository</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            margin: 10px;
+            background-color: #f4f4f4;
+        }
+        #home {
+            display: block;
+        }
+        nav a {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Command Repository</h1>
+        <nav>
+            <span onclick="showSection('home')">Home</span>
+            <span onclick="showSection('commands')">Commands</span>
+            <span onclick="showSection('tips')">Tips</span>
+            <span onclick="showSection('about')">About</span>
+        </nav>
+    </header>
+    <div id="home" class="section">
+        <h2>Home</h2>
+        <p>Welcome to the homepage of my personal command repository.</p>
+    </div>
+    <div id="commands" class="section">
+        <h2>Commands</h2>
+        <p>Here you can find a list of useful commands.</p>
+    </div>
+    <div id="tips" class="section">
+        <h2>Tips</h2>
+        <p>Some useful tips and tricks.</p>
+    </div>
+    <div id="about" class="section">
+        <h2>About</h2>
+        <p>Information about this repository and its purpose.</p>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2023 All rights reserved.</p>
+    </footer>
+    <script>
+        function showSection(id) {
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
